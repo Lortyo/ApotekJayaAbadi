@@ -6,16 +6,16 @@ switch($_GET['page']){
 
     case 'beranda':
         include_once "template/bootstrap.php";
-        include_once "template/sidebar.php";
         include_once "template/navbar.php";
+        include_once "template/sidebarangga.php";
         include_once "beranda.php";
         include_once "template/footer.php";
         break;
 
     case 'obat':
         include_once "template/bootstrap.php";
-        include_once "template/sidebar.php";
         include_once "template/navbar.php";
+        include_once "template/sidebarangga.php";
         include_once "view/lihatobat.php";
         break;
     case 'tambahobat':
@@ -37,8 +37,8 @@ switch($_GET['page']){
     
     case 'pelanggan':
         include_once "template/bootstrap.php";
-        include_once "template/sidebar.php";
         include_once "template/navbar.php";
+        include_once "template/sidebarangga.php";
         include_once "view/lihatpelanggan.php";
         break;
     case 'tambahpelanggan':
@@ -68,7 +68,14 @@ switch($_GET['page']){
         include_once 'template/navbar.php';
         include_once 'prosestambahtransaksi.php';
         break;
+
+    case 'transaksi_detail':
+        include_once 'template/bootstrap.php';
+        include_once 'template/navbar.php';
+        include_once 'transaksidetail.php';
+        break;
     }
+
 
 include_once "template/footer.php";
 ?>

@@ -6,8 +6,8 @@
     text-decoration: none;
     color: initial;
     }
-    .container{
-		width: 90%;
+    .lokek{
+		width: 100%;
 		margin: 80px auto;	 
 		display: flex;
 		flex-direction: row;
@@ -42,7 +42,7 @@
         $dat=mysqli_fetch_assoc($mek);?>
     <h1>Selamat Datang <?= $dat['username'];?> di Apotek </h1>
     <?php };?>
-    <div class="container">
+    <div class="lokek">
         <div class="box">
             <a href="dashboard.php?page=obat"><img src="gambarya/ivan gunakan.jpg" alt="foto input"></a>
         </div>

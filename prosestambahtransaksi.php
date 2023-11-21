@@ -8,13 +8,13 @@ $idkar=@$_COOKIE['idkar'];
 
 $hasil = mysqli_query($koneksi,"INSERT into transaksi values(NULL,'$idpelrill','$idkar','$tanggal','$kategori',0,0,0)");
 
-mysqli_fetch_row(mysqli_query($koneksi, "select last_insert_id()"));
-
+$idtransaksi=mysqli_fetch_row(mysqli_query($koneksi, "select last_insert_id()"));
+setcookie('idtransaksi',$idtransaksi[0],time()+(60*60*24*1),'/');
 if (!$hasil) {
     echo "Gagal Memasukkan Data Transaksi" . mysqli_error($koneksi); 
 }else {
     //echo "<script>alert('Data berhasil ditambahkan !');window.location='dashboard.php?page=pelanggan';</script>";
-    header('location:dashboard.php?page=transaksi_detail');
+    header('location:dashboard.php?page=transaksi_detail&idtransaksi='.$idtransaksi[0]);
     exit();
 }
 ?>
