@@ -1,0 +1,47 @@
+img{
+    justify-content: center;
+    width: 180px;
+ }
+ .pendek{
+   width: 30px;
+ }
+ td{
+    font-size: 20px;
+ }
+ input{
+    font-size: 20px;
+ }
+ select{
+    font-size: 20px;
+ }
+ button{
+    margin-left: 400px;
+    font-size: 20px;
+ }
+ div{
+    margin-top: 100px;
+    background-color: aqua;
+    padding: 20px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+ }
+ .aaaa{
+    margin-right: 20px;
+ }
+ .cet>.makww{
+  display: none;
+ }
+ @media only screen and (max-width: 1500px){
+div{
+    margin-left: 370px;
+    margin-right: 370px;
+}
+}
+@media only screen and (width: 1024px){
+div{
+    margin-left: 150px;
+    margin-right: 150px;
+}
+}
