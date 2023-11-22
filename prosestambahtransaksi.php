@@ -5,7 +5,7 @@ $idkar=@$_COOKIE['idkar'];
 if($kategori=='umum'){
     $tanggal=date("Y-m-d");
     
-    $hasil=mysqli_query($koneksi, "INSERT into transaksi values(null, 30,'$idkar','$tanggal','$kategori',0,0,0)");
+    $hasil=mysqli_query($koneksi, "INSERT into transaksi values('', 30,'$idkar','$tanggal','$kategori',0,0,0)");
 
     $idtransaksi=mysqli_fetch_row(mysqli_query($koneksi, "SELECT last_insert_id()"));
     setcookie('idtransaksi',$idtransaksi[0],time()+(60*60*24*1),'/');

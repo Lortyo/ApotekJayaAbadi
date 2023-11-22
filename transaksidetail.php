@@ -7,6 +7,16 @@ $datapelanggan=mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT namalengkap fro
 
 $datakaryawan=mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT namakar from karyawan inner join transaksi using(idkar) where idtransaksi='$idtransaksi'"));
 
+if(@$_POST['more']){
+    $jumlah=$_POST['jumlah'];
+    $namaobat=$_POST['namaobat'];
+
+    $rowobat=mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT * FROM obat where namaobat='$namaobat'"));
+    $idobat=$rowobat['idobat'];
+    $harga=$rowobat['hargajual'];
+    $total=$jumlah*$harga;
+    mysqli_query($koneksi,"INSERT into detail_transaksi values('','$idtransaksi','$idobat','$jumlah','$harga','$total')");
+}
 ?>
 <div class="container mt-5">
     <div class="row">
@@ -44,7 +54,7 @@ $datakaryawan=mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT namakar from kar
                 </div>
                 <div class="input-group mt-3">   
                     <span class="input-group-text" id="bassic-addon1">Jumlah Obat</span>
-                    <input type="text" class="form-control" name="jumlah" aria-label="Username" aria-describedby="basic-addon1" autocomplete="off">
+                    <input type="number" class="form-control" name="jumlah" aria-label="Username" aria-describedby="basic-addon1" autocomplete="off">
                 </div>
 
                 <datalist id="obat">
@@ -60,8 +70,8 @@ $datakaryawan=mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT namakar from kar
                     }
                     ?>
                 </datalist>
-                <input type="submit" class="btn btn-success mt-3" value="Masukkan Obat Lagi">
-                <input type="submit" class="btn btn-success mt-3" value="Selesai">
+                <input type="submit" name="more" class="btn btn-success mt-3" value="Masukkan Obat Lagi">
+                <input type="submit" name="finish" class="btn btn-success mt-3" value="Selesai">
             </form>
         </div>
         <div class="col-2"></div>

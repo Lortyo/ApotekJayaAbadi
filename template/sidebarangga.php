@@ -9,25 +9,25 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="dashboard.php?page=beranda" class="nav-link <?php if(@$_GET['page']=='beranda'){echo "text-light active";}else{ echo "text-dark";};?>"aria-current="page">
+        <a href="dashboard.php?page=beranda" class="nav-link <?php if(@$_GET['page']=='beranda'){echo "active";}else{ echo "text-dark";};?>"aria-current="page">
             <i class="bi bi-house-fill pe-4 ps-3"></i>
           Home
         </a>
       </li>
       <li>
-        <a href="dashboard.php?page=pelanggan" class="nav-link text-light <?php if(@$_GET['page']=='pelanggan'){echo "active";}else{ echo "text-dark";};?>">
+        <a href="dashboard.php?page=pelanggan" class="nav-link <?php if(@$_GET['page']=='pelanggan'){echo "active";}else{ echo "text-dark";};?>">
           <i class="bi bi-person-fill pe-4 ps-3"></i>
           Pelanggan
         </a>
       </li>
       <li>
-        <a href="dashboard.php?page=obat" class="nav-link text-light <?php if(@$_GET['page']=='obat'){echo "active";}else{ echo "text-dark";};?>">
+        <a href="dashboard.php?page=obat" class="nav-link <?php if(@$_GET['page']=='obat'){echo "active";}else{ echo "text-dark";};?>">
           <i class="bi bi-capsule pe-4 ps-3"></i>
           Obat
         </a>
       </li>
       <li>
-        <a href="dashboard.php?page=tambahtransaksi" class="nav-link text-light <?php if(@$_GET['page']=='tambahtransaksi'){echo "active";}else{ echo "text-dark";};?>">
+        <a href="dashboard.php?page=tambahtransaksi" class="nav-link <?php if(@$_GET['page']=='tambahtransaksi'){echo "active";}else{ echo "text-dark";};?>">
         <i class="bi bi-cash pe-4 ps-3"></i>
           Transaksi
         </a>

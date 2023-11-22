@@ -73,6 +73,7 @@ switch($_GET['page']){
     case 'transaksi_detail':
         include_once 'template/bootstrap.php';
         include_once 'template/navbar.php';
+        include_once 'template/sidebarangga.php';
         include_once 'transaksidetail.php';
         break;
     }
