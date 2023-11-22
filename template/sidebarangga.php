@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-1"><nav class="d-flex sticky-top flex-column flex-shrink-0 p-0 text-dark" style="background-color: #F6F6F6; position:fixed; top:0; left:0; height: 100%; width: 200px;">
+        <div class="col-md-2"><nav class="d-flex sticky-top flex-column flex-shrink-0 p-0 text-dark" style="background-color: #F6F6F6; position:fixed; top:0; left:0; height: 100%; width: 200px;">
     <a href="dashboard.php?page=beranda" class="d-flex justify-content-center pt-3 text-dark text-decoration-none">
         <img src="gambarya/group 141.png" alt="" width="125px">
     </a>
@@ -14,20 +14,20 @@
           Home
         </a>
       </li>
-      <li>
+      <li class="pt-2">
         <a href="dashboard.php?page=pelanggan" class="nav-link <?php if(@$_GET['page']=='pelanggan'){echo "active";}else{ echo "text-dark";};?>">
           <i class="bi bi-person-fill pe-4 ps-3"></i>
           Pelanggan
         </a>
       </li>
-      <li>
+      <li class="pt-2">
         <a href="dashboard.php?page=obat" class="nav-link <?php if(@$_GET['page']=='obat'){echo "active";}else{ echo "text-dark";};?>">
           <i class="bi bi-capsule pe-4 ps-3"></i>
           Obat
         </a>
       </li>
-      <li>
-        <a href="dashboard.php?page=tambahtransaksi" class="nav-link <?php if(@$_GET['page']=='tambahtransaksi'){echo "active";}else{ echo "text-dark";};?>">
+      <li class="pt-2">
+        <a href="dashboard.php?page=transaksi" class="nav-link <?php if(@$_GET['page']=='transaksi'){echo "active";}else{ echo "text-dark";};?>">
         <i class="bi bi-cash pe-4 ps-3"></i>
           Transaksi
         </a>
@@ -37,4 +37,4 @@
     <hr>
     <button class="btn mx-3" style="margin-bottom: 15px; background-color: #BF1717;"><a class="text-white" href="logoutcookie.php">Logout</a></button>
 </nav></div>
-    <div class="col-md-11" style="padding-right: 0;">
+    <div class="col-md-10" style="padding-right: 0;">

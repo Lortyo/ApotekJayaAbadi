@@ -1,17 +1,26 @@
+<style>
+    .table{
+        width: 95% !important;
+        font-size: 14px;
+        text-align: center;
+    }
+    .gaa{
+        text-align: left;
+    }
+</style>
 <title>Obat</title>
 </head>
 <body>
 <?php
 $data=mysqli_query($koneksi, "SELECT idobat,perusahaan,namaobat,kategoriobat,hargajual,hargabeli,stokobat,obat.keterangan FROM `obat` INNER JOIN supler ON obat.idsuplir = supler.idsuplir order by idobat desc;");
 ?>
-<br>
     <div>
     <center><h1>Data Obat</h1>
-    <a href="dashboard.php?page=tambahobat"><button>tambahkan data</button></a>
+    <a href="dashboard.php?page=tambahobat"><button class="btn btn-primary">+ Tambahkan Data</button></a>
 <br>
 <br>
 </center>
-    <table border="2" align="center">
+    <table class="table border-dark" align="center">
         <tr>
             <td>Id Obat</td>
             <td>Nama Perusahaan</td>
@@ -37,7 +46,7 @@ $data=mysqli_query($koneksi, "SELECT idobat,perusahaan,namaobat,kategoriobat,har
             <td class="tengah"><?= $hasil['stokobat']; ?></td>
             <td class="tengah"><?= $hasil['keterangan']; ?></td>
             <td>
-            <a href="dashboard.php?page=editobat&idobat=<?= $hasil['idobat']; ?>"><button type="button" >Edit</button></a>
+            <a href="dashboard.php?page=editobat&idobat=<?= $hasil['idobat']; ?>"><button type="button" class="btn btn-success" >Edit</button></a>
 
            
             <?php
@@ -49,7 +58,7 @@ $data=mysqli_query($koneksi, "SELECT idobat,perusahaan,namaobat,kategoriobat,har
 
             if($tes==0){
             ?>
-            <a href="dashboard.php?page=hapusobat&idobat=<?= $hasil['idobat']; ?>"><button type="button" >Delete</button></a>
+            <a href="dashboard.php?page=hapusobat&idobat=<?= $hasil['idobat']; ?>"><button type="button" class="btn btn-danger" >Delete</button></a>
             <?php
             }else{
                 echo "";

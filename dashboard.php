@@ -57,6 +57,14 @@ switch($_GET['page']){
         include_once 'update/proseseditpelanggan.php';
         break;
 
+    case 'transaksi':
+        include_once "template/bootstrap.php";
+        include_once "template/navbar.php";
+        include_once "template/sidebarangga.php";
+        include_once "view/lihattransaksi.php";
+        break;
+
+
     case 'tambahtransaksi':
         include_once 'template/bootstrap.php';
         include_once 'template/navbar.php';

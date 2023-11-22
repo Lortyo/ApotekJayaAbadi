@@ -23,9 +23,14 @@
 </style>
 </head>
 <body>
-<nav class="navbar d-flex sticky-top navbar-expand-lg navbar-light" style=" padding-top: 13px; padding-bottom: 13px;">
+<nav class="navbar d-flex sticky-top navbar-expand-lg navbar-light" style=" padding-top: 15px;">
     <div class="container-fluid">
             <ul class="navbar-nav">
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="">ini tes</a>
+                </li>
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
