@@ -60,6 +60,7 @@ switch($_GET['page']){
     case 'tambahtransaksi':
         include_once 'template/bootstrap.php';
         include_once 'template/navbar.php';
+        include_once 'template/sidebarangga.php';
         include_once 'tambahTransaksi.php';
         break;
         

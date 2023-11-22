@@ -26,9 +26,15 @@
           Obat
         </a>
       </li>
+      <li>
+        <a href="dashboard.php?page=tambahtransaksi" class="nav-link text-light <?php if(@$_GET['page']=='tambahtransaksi'){echo "active";}else{ echo "text-dark";};?>">
+        <i class="bi bi-cash pe-4 ps-3"></i>
+          Transaksi
+        </a>
+      </li>
     </ul>
     </div>
     <hr>
-    <button class="btn mx-3" style="margin-bottom: 15px; background-color: #E25C5C;"><a class="text-white" href="logoutcookie.php">Logout</a></button>
+    <button class="btn mx-3" style="margin-bottom: 15px; background-color: #BF1717;"><a class="text-white" href="logoutcookie.php">Logout</a></button>
 </nav></div>
     <div class="col-md-11" style="padding-right: 0;">

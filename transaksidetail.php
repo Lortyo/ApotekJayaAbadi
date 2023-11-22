@@ -20,7 +20,7 @@ $datakaryawan=mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT namakar from kar
                     </tr>
                     <tr>
                         <td>Tanggal Transaksi</td>
-                        <td><?=$row['tanggal']?></td>
+                        <td><?=$row['tgltransaksi']?></td>
                     </tr>
                     <tr>
                         <td>Pelanggan</td>
