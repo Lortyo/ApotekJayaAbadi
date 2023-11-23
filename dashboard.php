@@ -78,7 +78,7 @@ switch($_GET['page']){
         include_once 'prosestambahtransaksi.php';
         break;
 
-    case 'transaksi_detail':
+    case 'transaksidetail':
         include_once 'template/bootstrap.php';
         include_once 'template/navbar.php';
         include_once 'template/sidebarangga.php';

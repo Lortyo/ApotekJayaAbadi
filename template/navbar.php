@@ -4,9 +4,6 @@
     text-align: center;
     }
     a{
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
     text-decoration: none;
     color: initial;
     }
@@ -29,7 +26,17 @@
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a href="">ini tes</a>
+                    <input placeholder="Search" type="text">
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    
                 </li>
             </ul>
             <ul class="navbar-nav">

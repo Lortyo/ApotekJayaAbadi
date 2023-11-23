@@ -11,20 +11,13 @@
 <title>Obat</title>
 </head>
 <body>
-<?php
-$data=mysqli_query($koneksi, "SELECT iddetailtransaksi,namalengkap,namaobat,tgltransaksi,kategoripelanggan,totalbayar,bayar,kembali FROM `detail_transaksi` 
-inner join transaksi on detail_transaksi.idtransaksi = transaksi.idtransaksi 
-inner join pelanggan on transaksi.idpel = pelanggan.idpel
-inner join obat on detail_transaksi.idobat = obat.idobat
-order by iddetailtransaksi desc;");
-?>
-    <div>
     <center><h1>Detail Transaksi</h1>
     <a href="dashboard.php?page=tambahtransaksi"><button class="btn btn-primary">+ Tambahkan Data</button></a>
 <br>
 <br>
 </center>
-    <table class="table table-bordered border-dark" align="center">
+<div class="container">
+    <table class="table table-striped table-hover" align="center">
         <tr>
             <td>Id Transaksi</td>
             <td>Nama Pelanggan</td>
@@ -34,22 +27,35 @@ order by iddetailtransaksi desc;");
             <td>Total Bayar</td>
             <td>Bayar</td>
             <td>Kembali</td>
+            <td colspan="2">Aksi</td>
         </tr>
 
         <?php
+        $data = mysqli_query($koneksi, "SELECT * FROM transaksi INNER JOIN pelanggan USING(idpel) INNER JOIN karyawan USING(idkar) ORDER BY idtransaksi DESC"); 
         while ($hasil = mysqli_fetch_array($data)){
             ?>
         <tr>
-            <td class="tengah"><?= $hasil['iddetailtransaksi']; ?></td>
+            <td class="tengah"><?= $hasil['idtransaksi']; ?></td>
             <td class="tengah gaa"><?= $hasil['namalengkap']; ?></td>
-            <td class="tengah gaa"><?= $hasil['namaobat']; ?></td>
+            <td class="tengah gaa"><?= $hasil['namakar']; ?></td>
             <td class="tengah"><?= $hasil['tgltransaksi']; ?></td>
             <td class="tengah"><?= $hasil['kategoripelanggan']; ?></td>
-            <td class="tengah"><?= $hasil['totalbayar']?></td>
-            <td class="tengah"><?= $hasil['bayar']; ?></td>
-            <td class="tengah"><?= $hasil['kembali']; ?></td>
+            <td class="tengah"><?= number_format($hasil['totalbayar'],0,'.','.');?></td>
+            <td class="tengah"><?= number_format($hasil['bayar'],0,'.','.'); ?></td>
+            <td class="tengah"><?= number_format($hasil['kembali'],0,'.','.'); ?></td>
+            <td>
+                <a class="btn btn-success" href="dashboard.php?page=transaksidetail&idtransaksi=<?=$hasil['idtransaksi']?>">Lihat</a>
+            </td>
+            <?php
+            ?>
+            <td>
+                <a class="btn btn-danger" href="dashboard.php?page=deletetransaksi&idtransaksi=<?=$hasil['idtransaksi']?>">Delete</a>
+            </td>
+            <?php
+            ?>
         </tr>
         <?php
         };
         ?>
+        </div>
     </table>    
